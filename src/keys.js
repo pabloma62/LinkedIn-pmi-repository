@@ -1,6 +1,6 @@
 module.exports = {
 
     database: {
-        URI: 'mongodb://localhost:27017/awsimages4'
+        URI: 'mongodb://localhost:27017/amazondb2'
     }
 };

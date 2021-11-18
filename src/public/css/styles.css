@@ -19,7 +19,9 @@ body {
     background: linear-gradient(90deg, #f59220, #944d0a, #3f4044);
 }
  
-
+.sublogo {
+    color: antiquewhite;
+}
 h5 {
     padding-top: 1%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

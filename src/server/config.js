@@ -1,5 +1,8 @@
 const path = require('path');
 const {engine} = require('express-handlebars');
+const Handlebars = require('handlebars');
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
+
 
 const morgan = require('morgan');
 const multer = require('multer');
@@ -15,6 +18,7 @@ module.exports = app => {
     app.set('port', process.env.PORT || 3000);
     app.set('views', path.join(__dirname, '../views'));
     app.engine('.hbs', engine({
+        handlebars: allowInsecurePrototypeAccess(Handlebars),
         defaultLayout: 'main',
         partialsDir: path.join(app.get('views'), 'partials'),
         layoutsDir: path.join(app.get('views'), 'layouts'),
